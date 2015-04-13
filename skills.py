@@ -1,36 +1,26 @@
 # To work on the intermediate problems, set to True
-INTERMEDIATE = False
+INTERMEDIATE = True
 
 # To work on the advanced problems, set to True
 ADVANCED = False
 
 
 def all_odd(number_list):
-    """Return a list of only the odd numbers in the input list.
+    odds = []
+    for number in number_list:
+        if number % 2 ==0 is False:            
+            odds.append(number)
 
-        >>> all_odd([1, 2, 7, -5])
-        [1, 7, -5]
-
-        >>> all_odd([2, -6, 8])
-        []
-
-    """
-
-    return []
+    return odds
 
 
 def all_even(number_list):
-    """Return a list of only the even numbers in the input list.
+    evens = []
+    for number in number_list:
+        if number % 2 == 0 is True:
+            evens.append(number)
 
-        >>> all_even([2, 6, -1, -2])
-        [2, 6, -2]
-
-        >>> all_even([-1, 3, 5])
-        []
-
-    """
-
-    return []
+    return evens
 
 
 def print_indeces(my_list):
