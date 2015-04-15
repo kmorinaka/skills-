@@ -10,8 +10,10 @@ def all_odd(number_list):
     for number in number_list:
         if number % 2 ==0 is False:            
             odds.append(number)
-
+    print odds
     return odds
+
+all_odd(number_list)
 
 
 def all_even(number_list):
@@ -19,8 +21,10 @@ def all_even(number_list):
     for number in number_list:
         if number % 2 == 0 is True:
             evens.append(number)
-
+    print evens
     return evens
+
+all_even(number_list)
 
 
 def print_indeces(my_list):
@@ -46,17 +50,15 @@ def print_indeces(my_list):
 
 
 def long_words(word_list):
-    """Return all words in input list that are longer than 4 characters.
+    new_list = []
+    for word in word_list:
+        if len(word) > 4:
+            new_list.append(word)
+    
+    print new_list
+    return new_list
 
-        >>> long_words(["hello", "hey", "spam", "spam", "bacon", "bacon"])
-        ['hello', 'bacon', 'bacon']
-
-        >>> long_words(["all", "are", "tiny"])
-        []
-
-    """
-
-    return []
+long_words(word_list)
 
 
 def smallest_int(number_list):
