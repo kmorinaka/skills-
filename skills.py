@@ -92,7 +92,7 @@ def largest_int(number_list):
 
     return 0
 
-
+number_list = [2, 6, -2]
 def halvesies(number_list):
     """Return list of numbers from input list, each divided by two.
 
@@ -105,19 +105,25 @@ def halvesies(number_list):
         [0.5, 2.5]
 
     """
+    new_list = []
+    for number in number_list:
+        new_list.append(float(number / 2.0))
+    return new_list
 
-    return []
+
+
 
 
 def word_lengths(word_list):
+    new_list = []
+    for word in word_list:
+        return new_list.append(len(word))
     """Return the length of words in the input list.
 
         >>> word_lengths(["hello", "hey", "hello", "spam"])
         [5, 3, 5, 4]
 
     """
-
-    return []
 
 
 def sum_numbers(number_list):
