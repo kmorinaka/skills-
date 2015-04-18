@@ -6,25 +6,31 @@ ADVANCED = False
 
 
 def all_odd(number_list):
-    odds = []
-    for number in number_list:
-        if number % 2 ==0 is False:            
-            odds.append(number)
-    print odds
-    return odds
+    """Return a list of only the odd numbers in the input list.
 
-all_odd(number_list)
+        >>> all_odd([1, 2, 7, -5])
+        [1, 7, -5]
+
+        >>> all_odd([2, -6, 8])
+        []
+
+    """
+
+    return [number for number in number_list if number % 2 != 0]
 
 
 def all_even(number_list):
-    evens = []
-    for number in number_list:
-        if number % 2 == 0 is True:
-            evens.append(number)
-    print evens
-    return evens
+    """Return a list of only the even numbers in the input list.
 
-all_even(number_list)
+        >>> all_even([2, 6, -1, -2])
+        [2, 6, -2]
+
+        >>> all_even([-1, 3, 5])
+        []
+
+    """
+
+    return [number for number in number_list if number % 2 == 0]
 
 
 def print_indeces(my_list):
@@ -50,15 +56,17 @@ def print_indeces(my_list):
 
 
 def long_words(word_list):
-    new_list = []
-    for word in word_list:
-        if len(word) > 4:
-            new_list.append(word)
-    
-    print new_list
-    return new_list
+    """Return all words in input list that are longer than 4 characters.
 
-long_words(word_list)
+        >>> long_words(["hello", "hey", "spam", "spam", "bacon", "bacon"])
+        ['hello', 'bacon', 'bacon']
+
+        >>> long_words(["all", "are", "tiny"])
+        []
+
+    """
+
+    return [word for word in word_list if len(word) > 4]
 
 
 def smallest_int(number_list):
@@ -92,7 +100,7 @@ def largest_int(number_list):
 
     return 0
 
-number_list = [2, 6, -2]
+
 def halvesies(number_list):
     """Return list of numbers from input list, each divided by two.
 
@@ -105,25 +113,18 @@ def halvesies(number_list):
         [0.5, 2.5]
 
     """
-    new_list = []
-    for number in number_list:
-        new_list.append(float(number / 2.0))
-    return new_list
-
-
-
+    return [float(number/2.0) for number in number_list ]
 
 
 def word_lengths(word_list):
-    new_list = []
-    for word in word_list:
-        return new_list.append(len(word))
     """Return the length of words in the input list.
 
         >>> word_lengths(["hello", "hey", "hello", "spam"])
         [5, 3, 5, 4]
 
     """
+
+    return [len(word) for word in word_list]
 
 
 def sum_numbers(number_list):
@@ -141,8 +142,11 @@ def sum_numbers(number_list):
         0
 
     """
-
-    return 0
+    total = 0
+    for number in number_list:
+        total = number + number
+        
+    return total
 
 
 def mult_numbers(number_list):
@@ -163,7 +167,10 @@ def mult_numbers(number_list):
         1
 
     """
-    return 0
+    total = None
+    for number in number_list:
+        total = number * number
+    return total
 
 
 def join_strings(word_list):
@@ -226,6 +233,8 @@ def adv_find_unique_long_words(my_string):
 
     """
     return []
+
+
 
 
 ##############################################################################
